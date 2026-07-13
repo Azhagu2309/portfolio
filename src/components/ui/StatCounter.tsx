@@ -1,5 +1,5 @@
-import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { useCountUp } from "../../hooks/useCountUp";
 
 interface Props {
   value: number;
@@ -9,11 +9,13 @@ interface Props {
 
 export default function StatCounter({ value, suffix = "", label }: Props) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.4 });
+  const count = useCountUp(value, inView);
 
   return (
     <div ref={ref} className="text-center">
       <div className="font-display text-4xl font-bold text-gradient sm:text-5xl">
-        {inView ? <CountUp end={value} duration={2} suffix={suffix} /> : `0${suffix}`}
+        {count}
+        {suffix}
       </div>
       <p className="mt-2 font-mono text-xs uppercase tracking-wider text-slate-400">{label}</p>
     </div>
