@@ -31,8 +31,9 @@ VITE_BASE_PATH=/portfolio/ npm run build
 
 ## Before going live
 
-- Replace `azhagumurugan.dev` in `index.html`, `public/robots.txt`, and
-  `public/sitemap.xml` with your real deployed domain.
+- Live at `https://azhagumurugan-portfolio.vercel.app` — if you add a custom
+  domain later, update it in `index.html`, `public/robots.txt`, and
+  `public/sitemap.xml`.
 - Swap in a real profile photo and per-project GitHub repo links (see the
   "Known placeholders" section in `README.md`).
 - Set up EmailJS (or leave the `mailto:` fallback) for the contact form.

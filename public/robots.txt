@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://azhagumurugan.dev/sitemap.xml
+Sitemap: https://azhagumurugan-portfolio.vercel.app/sitemap.xml

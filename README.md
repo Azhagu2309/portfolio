@@ -10,7 +10,7 @@ A premium, animated portfolio for an ECE undergraduate specializing in Embedded 
 - Lenis for smooth scrolling
 - React Router (single page + a 404 route)
 - EmailJS for the contact form
-- `react-countup` / `react-intersection-observer` for animated stats
+- `react-intersection-observer` + a small custom hook for animated stats
 - `lucide-react` + `react-icons` for iconography
 
 ## Getting started
@@ -55,8 +55,13 @@ this build:
   skipped: live GitHub contribution graph, visitor counter, resume-download
   analytics, and an "AI assistant" placeholder — all of these need a server
   or third-party API this static site doesn't have.
-- **`azhagumurugan.dev`** in SEO meta tags / `sitemap.xml` / `robots.txt` is a
-  placeholder domain — replace it with the real deployed URL.
+
+## Live
+
+Deployed on Vercel at **https://azhagumurugan-portfolio.vercel.app**. SEO meta
+tags, `sitemap.xml`, and `robots.txt` all point at this URL — if you add a
+custom domain or the Vercel project URL changes, update those in one pass
+(`index.html`, `public/robots.txt`, `public/sitemap.xml`).
 
 ## Deployment
 
