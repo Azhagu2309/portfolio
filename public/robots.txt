@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://azhagumurugan-portfolio.vercel.app/sitemap.xml
+Sitemap: https://azhagumurugan-portfolio-azhagu2309s-projects.vercel.app/sitemap.xml

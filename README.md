@@ -58,7 +58,7 @@ this build:
 
 ## Live
 
-Deployed on Vercel at **https://azhagumurugan-portfolio.vercel.app**. SEO meta
+Deployed on Vercel at **https://azhagumurugan-portfolio-azhagu2309s-projects.vercel.app**. SEO meta
 tags, `sitemap.xml`, and `robots.txt` all point at this URL — if you add a
 custom domain or the Vercel project URL changes, update those in one pass
 (`index.html`, `public/robots.txt`, `public/sitemap.xml`).

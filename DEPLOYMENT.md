@@ -31,7 +31,7 @@ VITE_BASE_PATH=/portfolio/ npm run build
 
 ## Before going live
 
-- Live at `https://azhagumurugan-portfolio.vercel.app` — if you add a custom
+- Live at `https://azhagumurugan-portfolio-azhagu2309s-projects.vercel.app` — if you add a custom
   domain later, update it in `index.html`, `public/robots.txt`, and
   `public/sitemap.xml`.
 - Swap in a real profile photo and per-project GitHub repo links (see the
