@@ -29,7 +29,7 @@ export default function Hero() {
       <OscilloscopeWave className="absolute bottom-16 left-1/2 hidden h-16 w-72 -translate-x-1/2 opacity-70 sm:block" />
 
       <div className="mx-auto grid w-full max-w-6xl items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
-        <div>
+        <div className="min-w-0">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="mt-3 font-display text-5xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl"
+            className="mt-3 break-words font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl md:text-6xl xl:text-7xl"
           >
             <span className="text-gradient">{profile.name}</span>
           </motion.h1>
