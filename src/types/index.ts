@@ -48,3 +48,13 @@ export interface EducationEntry {
   duration: string;
   coursework: string[];
 }
+
+export interface JourneyMilestone {
+  date: string;
+  title: string;
+  org?: string;
+  description: string;
+  tech?: string[];
+  icon: string;
+  needsContent?: boolean;
+}

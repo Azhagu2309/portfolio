@@ -1,5 +1,6 @@
 import Hero from "../sections/Hero";
 import About from "../sections/About";
+import Journey from "../sections/Journey";
 import Skills from "../sections/Skills";
 import Projects from "../sections/Projects";
 import Achievements from "../sections/Achievements";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <WaveDivider />
       <About />
+      <Journey />
       <Skills />
       <Projects />
       <WaveDivider />

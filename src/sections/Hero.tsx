@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
-import { Download, Mail, ArrowDown } from "lucide-react";
-import { SiGithub } from "react-icons/si";
+import { Download, Mail, ArrowDown, GraduationCap } from "lucide-react";
+import { SiGithub, SiLeetcode, SiHackerrank } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa6";
-import { profile } from "../data/profile";
+import { profile, education } from "../data/profile";
 import { useTypingEffect } from "../hooks/useTypingEffect";
 import { scrollToHash } from "../hooks/useLenis";
 import { useGsapParallax } from "../hooks/useGsapReveal";
 import MagneticButton from "../components/ui/MagneticButton";
+import OscilloscopeWave from "../components/background/OscilloscopeWave";
+import NeuralNetworkMesh from "../components/background/NeuralNetworkMesh";
 
 export default function Hero() {
   const typed = useTypingEffect(profile.taglines);
@@ -22,6 +24,10 @@ export default function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/3 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-gradient-to-br from-cyan-500/10 via-blue-600/5 to-transparent blur-3xl"
       />
+
+      <NeuralNetworkMesh className="absolute inset-0 hidden h-full w-full opacity-40 lg:block" />
+      <OscilloscopeWave className="absolute bottom-16 left-1/2 hidden h-16 w-72 -translate-x-1/2 opacity-70 sm:block" />
+
       <div className="mx-auto grid w-full max-w-6xl items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
           <motion.p
@@ -50,6 +56,25 @@ export default function Hero() {
           >
             <p className="text-lg font-medium text-slate-200 sm:text-xl">{profile.role}</p>
             <p className="text-sm text-slate-400 sm:text-base">{profile.subtitle}</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.28 }}
+            className="mt-4 flex flex-wrap items-center gap-2.5"
+          >
+            <span className="inline-flex items-center gap-2 rounded-full border border-green-400/25 bg-green-400/10 px-3 py-1 font-mono text-xs text-green-300">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
+              </span>
+              {profile.availability}
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/25 bg-cyan-400/5 px-3 py-1 font-mono text-xs text-cyan-300">
+              <GraduationCap size={13} />
+              {education[0].institution}
+            </span>
           </motion.div>
 
           <motion.div
@@ -115,6 +140,30 @@ export default function Hero() {
             >
               <FaLinkedin size={17} />
             </a>
+            {profile.leetcode && (
+              <a
+                href={profile.leetcode}
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="link"
+                aria-label="LeetCode"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-slate-300 transition-all hover:border-cyan-400/50 hover:text-cyan-300"
+              >
+                <SiLeetcode size={16} />
+              </a>
+            )}
+            {profile.hackerrank && (
+              <a
+                href={profile.hackerrank}
+                target="_blank"
+                rel="noreferrer"
+                data-cursor="link"
+                aria-label="HackerRank"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-slate-300 transition-all hover:border-cyan-400/50 hover:text-cyan-300"
+              >
+                <SiHackerrank size={16} />
+              </a>
+            )}
             <a
               href={`mailto:${profile.email}`}
               data-cursor="link"
@@ -132,6 +181,15 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative mx-auto flex h-64 w-64 items-center justify-center sm:h-80 sm:w-80"
         >
+          <motion.div
+            className="absolute -inset-2 rounded-full opacity-70 blur-md"
+            style={{
+              background:
+                "conic-gradient(from 0deg, rgba(0,229,255,0.55), rgba(37,99,235,0.4), rgba(34,197,94,0.45), rgba(0,229,255,0.55))",
+            }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          />
           <motion.div
             className="absolute inset-0 rounded-full border border-cyan-400/30"
             animate={{ rotate: 360 }}

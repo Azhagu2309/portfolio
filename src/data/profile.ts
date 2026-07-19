@@ -19,7 +19,10 @@ export const profile = {
   phone: "+91 63802 83050",
   linkedin: "https://www.linkedin.com/in/azhagumuruganr",
   github: "https://github.com/Azhagu2309",
+  leetcode: "",
+  hackerrank: "",
   resumeUrl: "/Azhagumurugan-R-Resume.pdf",
+  availability: "Available for opportunities",
   summary:
     "Electronics and Communication Engineering undergraduate at Madras Institute of Technology, Anna University, with strong foundations in C/C++, Embedded Systems, Digital Signal Processing, and Real-Time Systems. Experienced in FPGA-based system design, hardware-software integration, debugging, and system validation — skilled in algorithm optimization, control systems fundamentals, and modular software development. Seeking a Software & Hardware Engineering role to contribute to industrial-grade embedded and product engineering systems.",
   heroDescription:

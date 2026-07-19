@@ -6,14 +6,14 @@ export function useActiveSection(sectionIds: string[]) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible[0]) {
-          setActiveId(visible[0].target.id);
-        }
+        const intersecting = entries.filter((entry) => entry.isIntersecting);
+        if (intersecting.length === 0) return;
+        const closest = intersecting.reduce((a, b) =>
+          Math.abs(a.boundingClientRect.top) < Math.abs(b.boundingClientRect.top) ? a : b
+        );
+        setActiveId(closest.target.id);
       },
-      { rootMargin: "-40% 0px -50% 0px", threshold: [0.1, 0.25, 0.5, 0.75] }
+      { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
     );
 
     sectionIds.forEach((id) => {

@@ -8,7 +8,7 @@ export const achievements: Achievement[] = [
     description: "Reached the national finals among competing teams building under time-boxed hackathon constraints.",
   },
   {
-    title: "Finalist — Pragyean",
+    title: "Finalist — Pragyan",
     org: "National Institute of Technology",
     date: "2025",
     description: "National-level hackathon finalist hosted at NIT, competing against teams from across the country.",
